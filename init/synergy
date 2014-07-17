@@ -19,6 +19,7 @@ BIN=synergys
 DESC="synergy server daemon"
 SCRIPTNAME=/etc/init.d/$NAME
 
+USER='syn'
 PIDFILE=/var/run/$NAME.pid
 LOCKFILE=/var/lock/subsys/$NAME
 LOGFILE=/var/log/synergy/$NAME.log
@@ -45,7 +46,7 @@ do_start()
 
   touch $PIDFILE
 
-  su albert.dixon -c "/usr/bin/$BIN --daemon --restart --config $CONFIG --debug $LEVEL --log $LOGFILE"
+  su $USER -c "/usr/bin/$BIN --daemon --restart --config $CONFIG --debug $LEVEL --log $LOGFILE"
   pgrep $BIN > $PIDFILE
 
   is_running && success && echo && return 0

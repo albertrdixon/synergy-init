@@ -1,0 +1,26 @@
+# Synergy init.d defaults file
+
+# Set the runtime user
+#  Default: syn
+#
+# USER='some.user'
+
+# Set the config file. Give absolute path.
+#  Default: /etc/synergy.conf
+#
+# CONFIG=/etc/$NAME.conf
+
+# Set the log file. Give absolute path.
+#  Default: /var/log/synergy/synergy.log
+#
+# LOGFILE=/var/log/synergy/$NAME.log
+
+# Set the log level. See synergy docs for more info.
+#  Default: INFO
+#
+# LEVEL="INFO"
+
+# Set time to wait for synergy to start up. In seconds.
+#  Default: 10
+#
+# WAIT_FOR_START=10
